@@ -17,7 +17,7 @@ repos:
     hooks:
       - id: codespell
         args:
-          - --ignore-words-list=hass,alot,datas,dof,dur,farenheit,hist,iff,ines,ist,lightsensor,mut,nd,pres,referer,ser,serie,te,technik,ue,uint,visability,wan,wanna,withing,Adresse,termine,adresse,oder,alle,assistent,hart,marz,worthing,linz,celle,vor
+          - --ignore-words-list=hass,alot,datas,dof,dur,farenheit,hist,iff,ines,ist,lightsensor,mut,nd,pres,referer,ser,serie,te,technik,ue,uint,visability,wan,wanna,withing,Adresse,termine,adresse,oder,alle,assistent,hart,marz,worthing,linz,celle,vor,leibnitz,januar,februar,juni,juli,oktober,dezember
           - --skip="./.*,*.csv,*.json"
           - --quiet-level=2
         exclude_types: [csv, json]
@@ -54,7 +54,7 @@ repos:
         stages: [manual]
       - id: check-json
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.6.1
+    rev: v1.10.0
     hooks:
       - id: mypy
         additional_dependencies: ["types-requests", "types-python-dateutil", "types-pyyaml"]
@@ -63,3 +63,4 @@ repos:
           - --show-error-codes
           - --show-error-context
           - --ignore-missing-imports
+          - --explicit-package-bases
